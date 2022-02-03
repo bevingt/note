@@ -5,4 +5,4 @@ iptv 国内源
 `https://cdn.jsdelivr.net/gh/bevingt/note/QuantumultX_Profiles.conf`
 
 ## Shadowrocket config
-'https://raw.githubusercontent.com/bevingt/note/master/shadowrocket.conf'
+`https://raw.githubusercontent.com/bevingt/note/master/shadowrocket.conf`
