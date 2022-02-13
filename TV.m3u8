@@ -139,8 +139,6 @@ http://39.134.66.66/PLTV/88888888/224/3221225642/index.m3u8
 http://39.134.66.66/PLTV/88888888/224/3221225525/index.m3u8
 #EXTINF:-1 tvg-id="SiTVQuanJiShiTai.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV全纪实台 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/qjshd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="SiTVDongManXiuChang.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV动漫秀场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/dmxchd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVJingBaoTiYu.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV劲爆体育 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/jbtyhd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVXinShiJueTai.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV新视觉台 (1080p) [Not 24/7]
@@ -155,3 +153,5 @@ http://112.25.48.68/live/program/live/yxfyhd/4000000/mnf.m3u8
 http://112.25.48.68/live/program/live/shsshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVDuShiJuChang.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV都市剧场 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/dsjchd/4000000/mnf.m3u8
+#EXTINF:-1 tvg-id="SiTVMeiLiZuQiu.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV魅力足球 (1080p) [Not 24/7]
+http://112.25.48.68/live/program/live/mlyyhd/4000000/mnf.m3u8
