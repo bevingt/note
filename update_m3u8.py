@@ -83,14 +83,14 @@ def check(head,url):
         req = s.get(url, headers=header, timeout=2)
         status = req.status_code
         if status == 200:
-            print(f'检测连通性:',head,url, '\033[0;37;42m Online \033[0m', status)
+            print(f'检测连通性:',head,url, '\033[0;30;42m Online \033[0m', status)
             return True
         else:
-            print(f'检测连通性:',head,url, '\033[0;31;43m Timeout \033[0m', status)
+            print(f'检测连通性:',head,url, '\033[0;30;43m Timeout \033[0m', status)
             
             return False
     except requests.exceptions.RequestException:
-        print(f'检测连通性:',head,url, '\033[0;37;41m Error \033[0m')
+        print(f'检测连通性:',head,url, '\033[0;30;41m Error \033[0m')
         
         return False
 
