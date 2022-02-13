@@ -147,8 +147,6 @@ http://112.25.48.68/live/program/live/jbtyhd/4000000/mnf.m3u8
 http://112.25.48.68/live/program/live/xsjhd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVJiSuQiChe.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV极速汽车 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/jsqchd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="SiTVHuanXiaoJuChang.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV欢笑剧场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/hxjchd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVYouXiFengYun.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV游戏风云 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/yxfyhd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="SiTVShengHuoShiShang.cn" tvg-country="CN" tvg-language="Chinese" tvg-logo="" group-title="SiTV",SiTV生活时尚 (1080p) [Not 24/7]
