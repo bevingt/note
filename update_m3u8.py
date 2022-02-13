@@ -86,7 +86,7 @@ def check(head,url):
             print(f'检测连通性:',head,url, '\033[0;37;42m Online \033[0m', status)
             return True
         else:
-            print(f'检测连通性:',head,url, '\033[0;35;43m Timeout \033[0m', status)
+            print(f'检测连通性:',head,url, '\033[0;31;43m Timeout \033[0m', status)
             
             return False
     except requests.exceptions.RequestException:
