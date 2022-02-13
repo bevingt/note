@@ -10,6 +10,8 @@
 
 `https://cdn.jsdelivr.net/gh/bevingt/note/TV.m3u8`
 
+EGP:`https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
+
 ## QuantumultX Config File
 `https://cdn.jsdelivr.net/gh/bevingt/note/QuantumultX_Profiles.conf`
 
