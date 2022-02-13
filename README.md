@@ -12,6 +12,9 @@
 
 EGP:`https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
 
+## 全平台IPTV播放器
+iptvnator:
+`https://github.com/4gray/iptvnator/releases`
 
 ## Shadowrocket config
 `https://raw.githubusercontent.com/bevingt/note/master/shadowrocket.conf`
