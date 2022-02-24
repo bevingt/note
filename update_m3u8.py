@@ -101,7 +101,7 @@ def main(url):
     head_keys = ['CCTV', '卫视', '浙江', 'NewTV', 'SiTV']
     groups = ['央视', '卫视', '本地台', 'NewTV', 'SiTV']
     combo_dict = combo(file_split, head_keys, groups)
-    with open('TV.m3u8', 'w', encoding='utf8') as fw:
+    with open('TV.m3u', 'w', encoding='utf8') as fw:
         fw.write('#EXTM3U'+'\n')
         for key in list(combo_dict.keys()):
             if check(key.split(',')[1],combo_dict[key]):
