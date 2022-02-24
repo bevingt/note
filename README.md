@@ -8,7 +8,7 @@
 
 不定期更新。
 
-`https://cdn.jsdelivr.net/gh/bevingt/note/TV.m3u8`
+`https://cdn.jsdelivr.net/gh/bevingt/note/TV.m3u`
 
 EGP:`https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
 
