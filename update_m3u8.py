@@ -10,13 +10,13 @@ def download_iptv_m3u(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36'
     }
     resp = requests.get(url, headers=header)
-    with open('cn.m3u', 'wb') as m3u8_file:
-        m3u8_file.write(resp.content)
+    with open('cn.m3u', 'wb') as m3u_file:
+        m3u_file.write(resp.content)
 
 
 def read_m3u():
     '''
-    读取m3u8文件，并筛选1080P的列表，转成字典
+    读取m3u文件，并筛选1080P的列表，转成字典
         '''
     with open('cn.m3u', 'r', encoding='utf8') as m3u:
         lines = m3u.read()
