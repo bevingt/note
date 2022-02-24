@@ -2,24 +2,24 @@ import requests
 from requests.adapters import HTTPAdapter
 
 
-def download_iptv_m3u8(url):
+def download_iptv_m3u(url):
     '''
-    从iptv-org处下载m3u8文件
+    从iptv-org处下载cn.m3u文件
     '''
     header = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36'
     }
     resp = requests.get(url, headers=header)
-    with open('cn.m3u8', 'wb') as m3u8_file:
+    with open('cn.m3u', 'wb') as m3u8_file:
         m3u8_file.write(resp.content)
 
 
-def read_m3u8():
+def read_m3u():
     '''
     读取m3u8文件，并筛选1080P的列表，转成字典
         '''
-    with open('cn.m3u8', 'r', encoding='utf8') as m3u8:
-        lines = m3u8.read()
+    with open('cn.m3u', 'r', encoding='utf8') as m3u:
+        lines = m3u.read()
     lines_list = lines.split('\n')
     file_split = {lines_list[i]: lines_list[i+1]
                   for i in range(1, len(lines_list)-1, 2)}
@@ -96,8 +96,8 @@ def check(head,url):
 
 
 def main(url):
-    download_iptv_m3u8(url)
-    file_split = read_m3u8()
+    download_iptv_m3u(url)
+    file_split = read_m3u()
     head_keys = ['CCTV', '卫视', '浙江', 'NewTV', 'SiTV']
     groups = ['央视', '卫视', '本地台', 'NewTV', 'SiTV']
     combo_dict = combo(file_split, head_keys, groups)
