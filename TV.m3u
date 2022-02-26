@@ -21,6 +21,8 @@ http://183.207.249.15/PLTV/3/224/3221225634/index.m3u8
 http://112.25.48.68/live/program/live/ahwshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",山东卫视 (1080p)
 http://117.169.120.140:8080/live/hdshandongstv/.m3u8
+#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",山东卫视 (1080p) [Timeout]
+http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",广东卫视 (1080p)
 http://112.25.48.68/live/program/live/gdwshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",江苏卫视 (1080p)
@@ -33,8 +35,6 @@ http://hw-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8
 http://183.207.249.37/PLTV/4/224/3221227307/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",湖北卫视 (1080p)
 http://117.169.120.140:8080/live/hdhubeistv/.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",湖南卫视 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-hunanstv/HD-2500k-1080P-hunanstv
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",辽宁卫视 (1080p)
 http://39.135.138.59:18890/PLTV/88888910/224/3221225696/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",重庆卫视 (1080p)
@@ -119,10 +119,6 @@ http://39.134.66.66/PLTV/88888888/224/3221225637/index.m3u8
 http://39.134.66.66/PLTV/88888888/224/3221225642/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="NewTV",NewTV金牌综艺 (1080p)
 http://39.134.66.66/PLTV/88888888/224/3221225525/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV全纪实台 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/qjshd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV动漫秀场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/dmxchd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV劲爆体育 (1080p) [Not 24/7]
 http://112.25.48.68/live/program/live/jbtyhd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV新视觉台 (1080p) [Not 24/7]
