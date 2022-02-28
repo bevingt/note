@@ -11,14 +11,10 @@ http://183.207.249.7/PLTV/4/224/3221227396/index.m3u8
 https://hwapi.yunshicloud.com/8xughf/e0bx15.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",北京卫视 (1080p)
 http://183.207.249.7/PLTV/3/224/3221225574/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",北京卫视 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/bjwshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",天津卫视 (1080p)
 http://117.169.120.140:8080/live/hdtianjinstv/.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",安徽卫视 (1080p)
 http://183.207.249.15/PLTV/3/224/3221225634/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",安徽卫视 (1080p) [Timeout]
-http://112.25.48.68/live/program/live/ahwshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",山东卫视 (1080p)
 http://117.169.120.140:8080/live/hdshandongstv/.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",广东卫视 (1080p)
@@ -35,10 +31,6 @@ http://183.207.249.37/PLTV/4/224/3221227307/index.m3u8
 http://117.169.120.140:8080/live/hdhubeistv/.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",湖南卫视 (1080p)
 http://39.134.115.163:8080/PLTV/88888910/224/3221225745/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",湖南卫视 (1080p) [Timeout]
-http://183.207.248.71/cntv/live1/hunanstv/hunanstv
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",辽宁卫视 (1080p)
-http://112.25.48.68/live/program/live/lnwshd/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",重庆卫视 (1080p)
 http://117.169.120.132:8080/live/chongqingstv/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="卫视",青海卫视 (1080p)
@@ -121,23 +113,3 @@ http://39.134.66.66/PLTV/88888888/224/3221225637/index.m3u8
 http://39.134.66.66/PLTV/88888888/224/3221225642/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="NewTV",NewTV金牌综艺 (1080p)
 http://39.134.66.66/PLTV/88888888/224/3221225525/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV全纪实台 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/qjshd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV动漫秀场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/dmxchd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV劲爆体育 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/jbtyhd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV新视觉台 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/xsjhd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV极速汽车 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/jsqchd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV欢笑剧场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/hxjchd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV游戏风云 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/yxfyhd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV生活时尚 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/shsshd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV都市剧场 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/dsjchd/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="" tvg-country="CN" tvg-language="" tvg-logo="" group-title="SiTV",SiTV魅力足球 (1080p) [Not 24/7]
-http://112.25.48.68/live/program/live/mlyyhd/4000000/mnf.m3u8
