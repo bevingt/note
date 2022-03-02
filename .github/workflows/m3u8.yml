@@ -2,10 +2,10 @@ name: Update_m3u
 
 on:
   push:
-    branches:
-      - master
-  schedule:
-    - cron: '2 4,10,16,22 * * *'
+#     branches:
+#       - master
+#   schedule:
+#     - cron: '2 16 * * *'
 jobs:
   csdn-emailbot:
     runs-on: ubuntu-latest
