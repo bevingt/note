@@ -99,7 +99,7 @@ class M3U:
         s.mount('http://', HTTPAdapter(max_retries=5))
         s.mount('https://', HTTPAdapter(max_retries=5))
         try:
-            req = s.get(url, headers=header,timeout=(5,10))
+            req = s.get(url, headers=header,timeout=(3,5))
             status = req.status_code
             if status == 200:
                 logging.info(
