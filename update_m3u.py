@@ -99,7 +99,7 @@ class M3U:
         s.mount('http://', HTTPAdapter(max_retries=5))
         s.mount('https://', HTTPAdapter(max_retries=5))
         try:
-            req = s.get(url, headers=header, timeout=2)
+            req = s.get(url, headers=header)
             status = req.status_code
             if status == 200:
                 logging.info(
@@ -107,10 +107,10 @@ class M3U:
                 return True
             else:
                 logging.warning(
-                    f'检测连通性: {name}, {url},\033[0;31;43m Timeout \033[0m {str(status)}')
+                    f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(status)}')
                 return False
         except requests.exceptions.RequestException:
-            logging.error(f'检测连通性: {name}, {url}, \033[0;37;41m Error \033[0m')
+            logging.error(f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
             return False
 
     def to_m3u(self):
