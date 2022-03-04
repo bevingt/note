@@ -112,6 +112,10 @@ class M3U:
         except requests.exceptions.RequestException:
             logging.error(f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
             return False
+        except requests.exceptions.Timeout:
+            logging.error(f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
+            return False
+            
 
     def to_m3u(self):
         with open('TV.m3u', 'w', encoding='utf8') as fw:
