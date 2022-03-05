@@ -53,7 +53,7 @@ class M3U:
         logo = self.logo_data
         with open('./script/cn.json', 'r') as jf:
             file = json.loads(jf.read())
-        heigh_1080 = [i for i in file if '1080' in i['name']]
+        heigh_1080 = [i for i in file if '1080' in i['name'] or '720' in i['name']]
         for heigh in heigh_1080:
             tv_name = re.findall(
                 '(.*?)\s\(.*?\)', heigh['name'].replace('-', ''))[0]
