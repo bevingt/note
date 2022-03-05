@@ -76,15 +76,26 @@ class M3U:
 
     def classify(self):
         for i in self.screen:
-            init = {}
-            init['tvg-id'] = ''
-            init['tvg-name'] = i['tvg']['id']
-            init['tvg-logo'] = i['logo']
-            init['group-title'] = i['group-title']
-            init['name'] = i['name']
-            init['url'] = i['url']
-            if self.check(init['name'], init['url']):
-                self.m3u_list.append(init)
+            if self.check(i['name'], i['url']):
+                temp = {
+                'tvg-id': '',
+                'tvg-name': i['tvg']['id'],
+                'tvg-logo': i['logo'],
+                'group-title': i['group-title'],
+                'name': i['name'],
+                'url': i['url']
+                }
+                self.m3u_list.append(temp)
+            
+#             init = {}
+#             init['tvg-id'] = ''
+#             init['tvg-name'] = i['tvg']['id']
+#             init['tvg-logo'] = i['logo']
+#             init['group-title'] = i['group-title']
+#             init['name'] = i['name']
+#             init['url'] = i['url']
+#             if self.check(init['name'], init['url']):
+#                 self.m3u_list.append(init)
         self.classifies = sorted(self.m3u_list, key=itemgetter('group-title'))
         logging.info('classify... Done!')
 
