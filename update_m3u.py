@@ -76,6 +76,7 @@ class M3U:
 
     def classify(self):
         for i in self.screen:
+            print(i['name'], i['url'])
             if self.check(i['name'], i['url']):
                 temp = {
                 'tvg-id': '',
