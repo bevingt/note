@@ -4,7 +4,6 @@ import json
 from operator import itemgetter
 import re
 import logging
-from urllib import request
 
 class M3U:
 
@@ -76,17 +75,17 @@ class M3U:
 
     def classify(self):
         for i in self.screen:
-            print(i['name'], i['url'])
-            if self.check(i['name'], i['url']):
-                temp = {
-                'tvg-id': '',
-                'tvg-name': i['tvg']['id'],
-                'tvg-logo': i['logo'],
-                'group-title': i['group-title'],
-                'name': i['name'],
-                'url': i['url']
-                }
-                self.m3u_list.append(temp)
+#             print(i['name'], i['url'])
+#             if self.check(i['name'], i['url']):
+            temp = {
+            'tvg-id': '',
+            'tvg-name': i['tvg']['id'],
+            'tvg-logo': i['logo'],
+            'group-title': i['group-title'],
+            'name': i['name'],
+            'url': i['url']
+            }
+            self.m3u_list.append(temp)
             
 #             init = {}
 #             init['tvg-id'] = ''
@@ -100,28 +99,28 @@ class M3U:
         self.classifies = sorted(self.m3u_list, key=itemgetter('group-title'))
         logging.info('classify... Done!')
 
-    def check(self, name, url):
-        '''
-        连通性检测
-        '''
-        try:
-            startTime = int(round(time.time() * 1000))
-            with request.urlopen(url, timeout=2) as ts:
-                print(ts.status)
-                if ts.status == 200:
-                    endTime = int(round(time.time() * 1000))
-                    useTime = endTime - startTime
-                    logging.info(
-                        f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(ts.status)} {useTime}s')
-                    return True
-                else:
-                    logging.warning(
-                        f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(ts.status)}')
-                    return False
-        except:
-            logging.error(
-                f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
-            return False
+#     def check(self, name, url):
+#         '''
+#         连通性检测
+#         '''
+#         try:
+#             startTime = int(round(time.time() * 1000))
+#             with request.urlopen(url, timeout=2) as ts:
+#                 print(ts.status)
+#                 if ts.status == 200:
+#                     endTime = int(round(time.time() * 1000))
+#                     useTime = endTime - startTime
+#                     logging.info(
+#                         f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(ts.status)} {useTime}s')
+#                     return True
+#                 else:
+#                     logging.warning(
+#                         f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(ts.status)}')
+#                     return False
+#         except:
+#             logging.error(
+#                 f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
+#             return False
             
 
     def to_m3u(self):
