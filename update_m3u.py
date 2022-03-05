@@ -4,8 +4,7 @@ import json
 from operator import itemgetter
 import re
 import logging
-from requests.adapters import HTTPAdapter
-
+from urllib import request
 
 class M3U:
 
@@ -93,28 +92,22 @@ class M3U:
         '''
         连通性检测
         '''
-        header = {
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36'
-        }
-        s = requests.Session()
-        s.mount('http://', HTTPAdapter(max_retries=5))
-        s.mount('https://', HTTPAdapter(max_retries=5))
         try:
-            req = s.get(url, headers=header,timeout=(3,5))
-            status = req.status_code
-            if status == 200:
-                logging.info(
-                    f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(status)}')
-                return True
-            else:
-                logging.warning(
-                    f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(status)}')
-                return False
-        except requests.exceptions.RequestException:
-            logging.error(f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
-            return False
-        except requests.exceptions.Timeout:
-            logging.error(f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
+            startTime = int(round(time.time() * 1000))
+            with request.urlopen(url, timeout=2) as ts:
+                if ts.status == 200:
+                    endTime = int(round(time.time() * 1000))
+                    useTime = endTime - startTime
+                    logging.info(
+                        f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(ts.status)} {useTime}s')
+                    return True
+                else:
+                    logging.warning(
+                        f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(ts.status)}')
+                    return False
+        except:
+            logging.error(
+                f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
             return False
             
 
