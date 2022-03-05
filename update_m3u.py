@@ -107,6 +107,7 @@ class M3U:
         try:
             startTime = int(round(time.time() * 1000))
             with request.urlopen(url, timeout=2) as ts:
+                print(ts.status)
                 if ts.status == 200:
                     endTime = int(round(time.time() * 1000))
                     useTime = endTime - startTime
