@@ -60,11 +60,16 @@ class M3U:
                     heigh['logo'] = logo[lg]
                     heigh['tvg']['id'] = lg
                     heigh['name'] = lg
+                    if self.grouping(tv_name):
+                        heigh['group-title'] = self.grouping(tv_name)
+                    else:
+                        heigh['group-title'] = '其它'
                     break
-            if self.grouping(tv_name):
-                heigh['group-title'] = self.grouping(tv_name)
-            else:
-                heigh['group-title'] = '其它'
+                else:
+                    if self.grouping(tv_name):
+                        heigh['group-title'] = self.grouping(tv_name)
+                    else:
+                        heigh['group-title'] = '其它'
         self.screen = heigh_1080
         logging.info('Screening... Done!')
 
