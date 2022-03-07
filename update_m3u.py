@@ -53,8 +53,11 @@ class M3U:
             file = json.loads(jf.read())
         heigh_1080 = [i for i in file if '1080' in i['name'] or '720' in i['name']]
         for heigh in heigh_1080:
-            tv_name = re.findall(
-                '(.*?)\s\(.*?\)', heigh['name'].replace('-', ''))[0]
+            if '-' in heigh['name']:
+                tv_name = re.findall(
+                    '(.*?)\s\(.*?\)', heigh['name'].replace('-', ''))[0]
+            else:
+                tv_name=re.findall('(.*?)\s\(.*?\)', heigh['name'])[0]
             for lg in logo.keys():
                 if lg == tv_name:
                     heigh['logo'] = logo[lg]
