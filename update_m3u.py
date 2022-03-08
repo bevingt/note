@@ -42,7 +42,7 @@ class M3U:
         m3u_parser.sort_by('name')
         # print(m3u_parser.get_list())
         print(len(m3u_parser.get_list()))
-        m3u_parser.to_file('./script/cn.json')
+        m3u_parser.to_file('script/cn.json')
 
     def screening(self):
         '''
