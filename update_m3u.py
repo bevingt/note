@@ -4,6 +4,8 @@ import json
 from operator import itemgetter
 import re
 import logging
+from urllib import request
+import time
 
 class M3U:
 
@@ -72,7 +74,7 @@ class M3U:
                     if self.grouping(tv_name):
                         heigh['group-title'] = self.grouping(tv_name)
                     else:
-                        heigh['group-title'] = '其它'
+                        heigh['group-title'] = '其它'                    
         self.screen = heigh_1080
         logging.info('Screening... Done!')
 
@@ -83,8 +85,6 @@ class M3U:
 
     def classify(self):
         for i in self.screen:
-#             print(i['name'], i['url'])
-#             if self.check(i['name'], i['url']):
             temp = {
             'tvg-id': '',
             'tvg-name': i['tvg']['id'],
@@ -93,42 +93,33 @@ class M3U:
             'name': i['name'],
             'url': i['url']
             }
-            self.m3u_list.append(temp)
-            
-#             init = {}
-#             init['tvg-id'] = ''
-#             init['tvg-name'] = i['tvg']['id']
-#             init['tvg-logo'] = i['logo']
-#             init['group-title'] = i['group-title']
-#             init['name'] = i['name']
-#             init['url'] = i['url']
-#             if self.check(init['name'], init['url']):
-#                 self.m3u_list.append(init)
+            if self.check(temp['name'],temp['url']):
+                self.m3u_list.append(temp)
         self.classifies = sorted(self.m3u_list, key=itemgetter('group-title'))
         logging.info('classify... Done!')
 
-#     def check(self, name, url):
-#         '''
-#         连通性检测
-#         '''
-#         try:
-#             startTime = int(round(time.time() * 1000))
-#             with request.urlopen(url, timeout=2) as ts:
-#                 print(ts.status)
-#                 if ts.status == 200:
-#                     endTime = int(round(time.time() * 1000))
-#                     useTime = endTime - startTime
-#                     logging.info(
-#                         f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(ts.status)} {useTime}s')
-#                     return True
-#                 else:
-#                     logging.warning(
-#                         f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(ts.status)}')
-#                     return False
-#         except:
-#             logging.error(
-#                 f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
-#             return False
+    def check(self, name, url):
+        '''
+        连通性检测
+        '''
+        try:
+            startTime = int(round(time.time() * 1000))
+            with request.urlopen(url, timeout=2) as ts:
+                print(ts.status)
+                if ts.status == 200:
+                    endTime = int(round(time.time() * 1000))
+                    useTime = endTime - startTime
+                    logging.info(
+                        f'Checking: {name}, {url},\033[0;37;42m Online \033[0m  {str(ts.status)} {useTime}s')
+                    return True
+                else:
+                    logging.warning(
+                        f'Checking: {name}, {url},\033[0;31;43m Timeout \033[0m {str(ts.status)}')
+                    return False
+        except:
+            logging.error(
+                f'Checking: {name}, {url}, \033[0;37;41m Error \033[0m')
+            return False
             
 
     def to_m3u(self):
@@ -149,7 +140,6 @@ class M3U:
         self.screening()
         self.classify()
         self.to_m3u()
-
 
 if __name__ == "__main__":
     m3u_url = 'https://iptv-org.github.io/iptv/countries/cn.m3u'
